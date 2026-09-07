@@ -1,143 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Frac — Privacy Policy</title>
+<title>Applications Pairnoel — Politiques de confidentialite</title>
 <style>
-  :root {
-    color-scheme: light dark;
-    --ink: #1a1f18;
-    --soft: #55604f;
-    --line: #d8ded4;
-    --ground: #ffffff;
-    --accent: #1b5e20;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --ink: #e6ece3; --soft: #a5b09f; --line: #2b332a; --ground: #10140f; --accent: #a5d6a7; }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--ground);
-    color: var(--ink);
-    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  }
-  main { max-width: 44rem; margin: 0 auto; padding: 3rem 1.4rem 5rem; }
-  h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 .3rem; }
-  .updated { color: var(--soft); font-size: .92rem; margin: 0 0 2.5rem; }
-  h2 {
-    font-size: 1.15rem; margin: 2.6rem 0 .7rem;
-    padding-top: 1.4rem; border-top: 1px solid var(--line);
-  }
-  h2:first-of-type { border-top: 0; padding-top: 0; }
-  p, li { max-width: 42rem; }
-  ul { padding-left: 1.2rem; }
-  li { margin-bottom: .4rem; }
-  a { color: var(--accent); }
-  .lede {
-    font-size: 1.1rem;
-    border-left: 3px solid var(--accent);
-    padding: .2rem 0 .2rem 1.1rem;
-    margin: 0 0 2rem;
-  }
-  .lang-sep { margin: 4rem 0 0; border: 0; border-top: 2px solid var(--line); }
-  footer { margin-top: 3rem; color: var(--soft); font-size: .9rem; }
+:root {
+  color-scheme: light dark;
+  --bg: #fdfcfb; --fg: #1b1b1c; --muted: #5c5c60;
+  --rule: #e2e0dd; --card: #ffffff; --tint: #5c5c60;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #131314; --fg: #e8e6e3; --muted: #a3a1a0;
+          --rule: #2e2e30; --card: #1c1c1e; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+.wrap { max-width: 46rem; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+header { border-bottom: 3px solid var(--tint); padding-bottom: 1.25rem; margin-bottom: 2rem; }
+h1 { font-size: 1.75rem; margin: 0 0 .35rem; letter-spacing: -.01em; }
+h1 .dot { display: inline-block; width: .6em; height: .6em; border-radius: 50%;
+  background: var(--tint); margin-right: .5rem; vertical-align: baseline; }
+h2 { font-size: 1.25rem; margin: 2.75rem 0 .75rem; padding-top: 1.5rem;
+  border-top: 1px solid var(--rule); letter-spacing: -.01em; }
+h2:first-of-type { border-top: 0; padding-top: 0; }
+h3 { font-size: 1rem; margin: 1.75rem 0 .5rem; }
+p, li { color: var(--fg); }
+.lede { color: var(--muted); font-size: 1.05rem; margin: 0; }
+.updated { color: var(--muted); font-size: .875rem; margin: .5rem 0 0; }
+a { color: var(--tint); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+@media (prefers-color-scheme: dark) { a { filter: brightness(1.45); } }
+.tablewrap { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; min-width: 30rem; font-size: .9375rem; }
+th, td { text-align: left; padding: .7rem .85rem; border-bottom: 1px solid var(--rule);
+  vertical-align: top; }
+th { font-weight: 600; color: var(--muted); font-size: .8125rem;
+  text-transform: uppercase; letter-spacing: .04em; }
+tr:last-child td { border-bottom: 0; }
+table { background: var(--card); border: 1px solid var(--rule); border-radius: .5rem; }
+.key { font-weight: 600; white-space: normal; }
+.callout { background: var(--card); border: 1px solid var(--rule);
+  border-left: 3px solid var(--tint); border-radius: .375rem;
+  padding: .9rem 1.1rem; margin: 1.25rem 0; }
+.callout p { margin: 0; }
+.lang { display: inline-block; font-size: .75rem; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule);
+  border-radius: 999px; padding: .2rem .7rem; margin-bottom: 1rem; }
+footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule);
+  color: var(--muted); font-size: .875rem; }
+
+.grid { display: grid; gap: .75rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
+.grid a { display: flex; align-items: center; gap: .85rem; text-decoration: none;
+  background: var(--card); border: 1px solid var(--rule); border-radius: .5rem;
+  padding: .95rem 1.1rem; color: var(--fg); }
+.grid a:hover { border-color: var(--muted); }
+.grid .sw { width: .85rem; height: .85rem; border-radius: 50%; flex: none; }
+.grid .nm { font-weight: 600; }
+.grid .ds { color: var(--muted); font-size: .875rem; margin-top: .1rem; }
 </style>
 </head>
 <body>
-<main>
+<div class="wrap">
+<header>
+  <h1>Applications Pairnoel</h1>
+  <p class="lede">Politiques de confidentialite &middot; Privacy policies</p>
+  <p class="updated">Mise a jour : 1er septembre 2026 &middot; Updated: 1 September 2026</p>
+</header>
 
-  <h1>Privacy Policy — Frac</h1>
-  <p class="updated">Last updated: 29 August 2026 · Applies to the Android app <strong>Frac</strong> (package <code>fr.pairnoel.frac</code>)</p>
+<p>Cinq applications Android qui parlent chacune a un serveur auto-heberge, celui
+que vous leur indiquez. Aucune ne collecte de donnees pour ses auteurs, aucune
+n'affiche de publicite, aucune n'integre de mesure d'audience.</p>
+<p><em>Five Android apps, each talking to a self-hosted server that you point it
+at. None collects data for its authors, none shows ads, none bundles
+analytics.</em></p>
 
-  <p class="lede">Frac does not collect, transmit, or share any personal data. Everything the app
-  stores stays on your device.</p>
+<ul class="grid">
+<li><a href="music.html"><span class="sw" style="background:#AD1457"></span><span><span class="nm">Music</span><span class="ds">Music lit la bibliotheque musicale hebergee sur votre propre serveur, sur telephone et dans Android Auto.</span></span></a></li>
+<li><a href="notes.html"><span class="sw" style="background:#2E7D32"></span><span><span class="nm">Notes</span><span class="ds">Notes tient vos notes et vos taches, stockees sur votre propre serveur.</span></span></a></li>
+<li><a href="domo.html"><span class="sw" style="background:#546E7A"></span><span><span class="nm">Domo</span><span class="ds">Domo pilote les equipements domotiques exposes par votre propre serveur, sur telephone et dans Android Auto.</span></span></a></li>
+<li><a href="conso.html"><span class="sw" style="background:#E06C00"></span><span><span class="nm">Conso</span><span class="ds">Conso suit la consommation de carburant de vos vehicules, enregistree sur votre propre serveur.</span></span></a></li>
+<li><a href="vocab.html"><span class="sw" style="background:#4527A0"></span><span><span class="nm">Vocab</span><span class="ds">Vocab vous interroge sur les listes de vocabulaire hebergees sur votre propre serveur.</span></span></a></li>
+<li><a href="alerts.html"><span class="sw" style="background:#00757F"></span><span><span class="nm">Alerts</span><span class="ds">Alerts recoit les alertes emises par votre propre serveur et les affiche en notification.</span></span></a></li>
+</ul>
 
-  <h2>Data the app collects</h2>
-  <p>None. Frac has no user accounts, no sign-in, no analytics, no crash-reporting SDK, no
-  advertising, and no network access of any kind. No information about you or your device is sent
-  anywhere.</p>
-
-  <h2>Data the app stores on your device</h2>
-  <p>When you finish or stop a training session, Frac saves a record of it in its own private
-  storage area on your phone. That record contains only:</p>
-  <ul>
-    <li>the name you gave the session;</li>
-    <li>the work and rest durations you chose;</li>
-    <li>the number of series you completed;</li>
-    <li>the date and time the session started.</li>
-  </ul>
-  <p>This history is readable only by Frac. It is not backed up to the cloud and is not copied
-  during a device-to-device transfer. You can delete any individual session by long-pressing it in
-  the list, and uninstalling the app deletes all of it permanently.</p>
-
-  <h2>Permissions</h2>
-  <p>Frac requests no Android permissions. It keeps the screen awake while a session is running,
-  which does not require a permission.</p>
-
-  <h2>Third parties</h2>
-  <p>Frac contains no third-party advertising, tracking, or analytics libraries, and does not use
-  an advertising identifier. No data is shared with anyone, because none is gathered.</p>
-
-  <h2>Children</h2>
-  <p>Frac is not directed at children and collects no data from anyone, regardless of age.</p>
-
-  <h2>Changes to this policy</h2>
-  <p>If a future version of Frac ever handles data differently, this page will be updated before
-  that version is released, and the date at the top will change.</p>
-
-  <h2>Contact</h2>
-  <p>Questions about this policy: <a href="mailto:CONTACT@EXAMPLE.COM">CONTACT@EXAMPLE.COM</a></p>
-
-  <hr class="lang-sep">
-
-  <h1 lang="fr">Politique de confidentialité — Frac</h1>
-  <p class="updated" lang="fr">Dernière mise à jour : 29 août 2026 · Concerne l'application Android <strong>Frac</strong> (paquet <code>fr.pairnoel.frac</code>)</p>
-
-  <p class="lede" lang="fr">Frac ne collecte, ne transmet et ne partage aucune donnée personnelle.
-  Tout ce que l'application enregistre reste sur votre appareil.</p>
-
-  <h2 lang="fr">Données collectées</h2>
-  <p lang="fr">Aucune. Frac n'a ni compte utilisateur, ni connexion, ni outil de mesure d'audience,
-  ni collecte de rapports de plantage, ni publicité, ni accès réseau. Aucune information vous
-  concernant ou concernant votre appareil n'est envoyée où que ce soit.</p>
-
-  <h2 lang="fr">Données enregistrées sur votre appareil</h2>
-  <p lang="fr">Lorsque vous terminez ou arrêtez une séance, Frac en enregistre une trace dans son
-  espace de stockage privé, sur votre téléphone. Cette trace contient uniquement :</p>
-  <ul lang="fr">
-    <li>le nom que vous avez donné à la séance ;</li>
-    <li>les durées de travail et de repos choisies ;</li>
-    <li>le nombre de séries effectuées ;</li>
-    <li>la date et l'heure de début de la séance.</li>
-  </ul>
-  <p lang="fr">Cet historique n'est lisible que par Frac. Il n'est ni sauvegardé dans le cloud, ni
-  copié lors d'un transfert d'appareil à appareil. Vous pouvez supprimer une séance par un appui
-  long dans la liste, et la désinstallation de l'application efface définitivement l'ensemble.</p>
-
-  <h2 lang="fr">Autorisations</h2>
-  <p lang="fr">Frac ne demande aucune autorisation Android. L'application maintient l'écran allumé
-  pendant une séance, ce qui ne nécessite pas d'autorisation.</p>
-
-  <h2 lang="fr">Tiers</h2>
-  <p lang="fr">Frac ne contient aucune bibliothèque publicitaire, de pistage ou de mesure d'audience,
-  et n'utilise pas d'identifiant publicitaire. Aucune donnée n'est partagée, puisqu'aucune n'est
-  recueillie.</p>
-
-  <h2 lang="fr">Enfants</h2>
-  <p lang="fr">Frac ne s'adresse pas aux enfants et ne collecte de données sur personne, quel que
-  soit son âge.</p>
-
-  <h2 lang="fr">Modifications</h2>
-  <p lang="fr">Si une future version de Frac traitait les données différemment, cette page serait
-  mise à jour avant sa publication et la date en haut serait modifiée.</p>
-
-  <h2 lang="fr">Contact</h2>
-  <p lang="fr">Questions à propos de cette politique : <a href="mailto:CONTACT@EXAMPLE.COM">CONTACT@EXAMPLE.COM</a></p>
-
-  <footer>Frac is an open, permission-free interval timer for Android.</footer>
-
-</main>
+<footer>
+<p>Contact : <a href="mailto:climatise.fr+pairnoel@gmail.com">climatise.fr+pairnoel@gmail.com</a></p>
+</footer>
+</div>
 </body>
 </html>
