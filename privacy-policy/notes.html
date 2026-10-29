@@ -57,12 +57,12 @@ footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--r
 <header>
   <h1><span class="dot"></span>Notes</h1>
   <p class="lede">Politique de confidentialite &middot; Privacy Policy</p>
-  <p class="updated">Derniere mise a jour : 1er septembre 2026 &middot; Last updated: 1 September 2026</p>
+  <p class="updated">Derniere mise a jour : 27 septembre 2026 &middot; Last updated: 27 September 2026</p>
 </header>
 
 <span class="lang">Fran&ccedil;ais</span>
 
-<p>Notes tient vos notes et vos taches, stockees sur votre propre serveur.</p>
+<p>Notes tient vos notes et vos taches, stockees sur votre propre serveur, et recoit les alertes qu'il emet.</p>
 
 <div class="callout">
 <p><strong>En une phrase :</strong> cette application ne parle qu'au serveur que
@@ -82,10 +82,22 @@ ni structure commerciale derriere elles. Contact : <a href="mailto:climatise.fr+
 <tr><td class="key">Adresse de votre serveur</td><td>Savoir a quel serveur s'adresser.</td></tr>
 <tr><td class="key">Cle remise par l'appairage</td><td>S'authentifier aupres de votre serveur. Elle n'est jamais affichee.</td></tr>
 <tr><td class="key">Contenu de vos notes et taches</td><td>Affiche dans l'application, stocke sur votre serveur.</td></tr>
+<tr><td class="key">Contenu des alertes recues</td><td>Affiche en notification puis dans la liste.</td></tr>
+<tr><td class="key">Jeton d'enregistrement Firebase (FCM)</td><td>Identifiant technique attribue a cette installation, transmis a votre serveur pour qu'il puisse joindre cet appareil. Voir la section « Service tiers ».</td></tr>
 </tbody>
 </table>
 </div>
-
+<h3>Service tiers</h3>
+<p>C'est la seule application de la famille qui depend d'un service tiers.
+Elle utilise <strong>Firebase Cloud Messaging</strong>, fourni par Google, pour
+recevoir en temps reel les alertes et les annonces de vos taches. Firebase
+attribue a chaque installation un jeton d'enregistrement ; ce jeton est
+transmis a votre serveur, qui s'en sert pour vous envoyer une notification. Le
+contenu de la notification transite par l'infrastructure de Google, comme pour
+toute notification poussee sur Android. Le traitement des donnees par Google
+est decrit dans la
+<a href="https://firebase.google.com/support/privacy">politique de
+confidentialite de Firebase</a>.</p>
 
 <h2>Ou vont ces donnees</h2>
 <p>L'application n'a pas de serveur a elle. Elle envoie vos donnees a
@@ -94,7 +106,7 @@ depuis l'ecran Preferences</strong>. Ce serveur vous appartient ou vous a ete co
 son exploitation releve de vous, pas de nous.</p>
 <p>Aucune donnee n'est transmise aux auteurs de l'application. Aucun outil de
 mesure d'audience, de suivi publicitaire ou de rapport de plantage tiers n'est
-integre.</p>
+integre. La seule exception est Firebase Cloud Messaging, decrite ci-dessus.</p>
 
 <h2>Ce qui reste sur votre appareil</h2>
 <p>L'adresse de votre serveur et la cle remise par l'appairage sont stockees dans
@@ -131,7 +143,7 @@ de version de l'application.</p>
 <h2 id="en">English</h2>
 <span class="lang">English</span>
 
-<p>Notes keeps your notes and tasks, stored on your own server.</p>
+<p>Notes keeps your notes and tasks, stored on your own server, and receives the alerts it raises.</p>
 
 <div class="callout">
 <p><strong>In one sentence:</strong> this app only talks to the server you point
@@ -151,10 +163,21 @@ commercial entity behind them. Contact: <a href="mailto:climatise.fr+pairnoel@gm
 <tr><td class="key">Your server address</td><td>Knowing which server to talk to.</td></tr>
 <tr><td class="key">The key handed over by pairing</td><td>Authenticating with your server. It is never displayed.</td></tr>
 <tr><td class="key">The content of your notes and tasks</td><td>Displayed in the app, stored on your server.</td></tr>
+<tr><td class="key">The content of received alerts</td><td>Shown as a notification, then in the list.</td></tr>
+<tr><td class="key">Firebase (FCM) registration token</td><td>A technical identifier assigned to this installation, sent to your server so it can reach this device. See the “Third-party service” section.</td></tr>
 </tbody>
 </table>
 </div>
-
+<h3>Third-party service</h3>
+<p>This is the only app in the family that relies on a third-party service. It
+uses <strong>Firebase Cloud Messaging</strong>, provided by Google, to receive
+alerts and task updates in real time. Firebase assigns a registration token to
+each installation; that token is sent to your server, which uses it to reach
+you. The notification content travels through Google's infrastructure, as it
+does for any Android push notification. Google's handling of that data is
+described in the
+<a href="https://firebase.google.com/support/privacy">Firebase privacy
+policy</a>.</p>
 
 <h3>Where the data goes</h3>
 <p>The app has no server of its own. It sends your data to <strong>a single
@@ -163,7 +186,7 @@ screen</strong>.
 That server is yours, or has been entrusted to you; running it is your
 responsibility, not ours.</p>
 <p>No data is sent to the app's authors. No analytics, advertising SDK or
-third-party crash reporter is bundled.</p>
+third-party crash reporter is bundled. The one exception is Firebase Cloud Messaging, described above.</p>
 
 <h3>What stays on your device</h3>
 <p>Your server address and the key handed over by pairing are stored in the app's
